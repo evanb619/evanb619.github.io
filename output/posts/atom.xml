@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Evan Burke</title>
+ <updated>2026-07-11T04:39:29.207713+00:00</updated>
+ <link href="file:///Users/emilsayahi/Documents/GitHub/evan-website/output/atom.xml" rel="self"/>
+ <link href="file:///Users/emilsayahi/Documents/GitHub/evan-website/output/"/>
+ <id>file:///Users/emilsayahi/Documents/GitHub/evan-website/output/</id>
+ <author>
+   <name>Evan Burke</name>
+ </author>
+
+ 
+ <entry>
+   <title>Fixing Static Site Generators</title>
+   <link href="file:///Users/emilsayahi/Documents/GitHub/evan-website/output/posts%2F2024%2F06%2F11%2FFixing%20Static%20Site%20Generators.html"/>
+   
+   <updated>2024-06-11T00:00:00+00:00</updated>
+   
+   <id>file:///Users/emilsayahi/Documents/GitHub/evan-website/output/posts%2F2024%2F06%2F11%2FFixing%20Static%20Site%20Generators.html</id>
+   <content type="html">
+&lt;p&gt;Static site generators (SSGs) are a class of software that evaluate template files at runtime to output new files.
+Many of these tools are intended for creating Web sites, used when you want to &lt;strong&gt;publish your own content and syndicate it elsewhere&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;SSGs are described as ‘simple’, with minimal installation &amp;amp; configuration burden, human-readable content files, and freedom from databases.
+This makes creating &amp;amp; updating sites relatively painless in many circumstances, and makes deployment fairly straightforward.&lt;/p&gt;
+&lt;p&gt;Despite the advantages over traditional content management systems (CMSes), there are some disadvantages common to many SSGs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Intended for software developers&lt;/li&gt;
+&lt;li&gt;Difficult to iterate with and scale&lt;/li&gt;
+&lt;li&gt;Templates are too limited for many use cases&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vox aims to address these issues to expand the use-cases of SSGs over CMSes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When you want to &lt;strong&gt;own&lt;/strong&gt; your content long-term&lt;/li&gt;
+&lt;li&gt;When you want to &lt;strong&gt;distribute&lt;/strong&gt; your content to many places&lt;/li&gt;
+&lt;li&gt;When you want to &lt;strong&gt;control&lt;/strong&gt; the infrastructure hosting your content&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2&gt;&lt;a href=&quot;#content-management-pipeline&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot; id=&quot;content-management-pipeline&quot;&gt;&lt;/a&gt;Content Management Pipeline&lt;/h2&gt;
+&lt;p&gt;The process of writing content, rendering it, and then deploying it, sounds straightforward.
+Unfortunately, each of these steps involves domain-specific knowledge that can harm the user experience.&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;#prerequisite-knowledge&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot; id=&quot;prerequisite-knowledge&quot;&gt;&lt;/a&gt;Prerequisite Knowledge&lt;/h3&gt;
+&lt;p&gt;To write content, you likely need to know:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the notation used by frontmatter&lt;/li&gt;
+&lt;li&gt;the templating language&lt;/li&gt;
+&lt;li&gt;the markup language&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For many people without technical backgrounds, the writing process alone forces them toward a traditional CMS.
+In fact, I’d argue no SSG—including Vox—can or &lt;em&gt;should&lt;/em&gt; solve this problem. This is exactly what the role of a static CMS should be.
+The role of Vox here is to be interoperable with a static CMS that simplifies writing and deployment.&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;#reducing-new-concepts&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot; id=&quot;reducing-new-concepts&quot;&gt;&lt;/a&gt;Reducing New Concepts&lt;/h3&gt;
+&lt;p&gt;Many SSGs introduce dozens of concepts relating to their use &amp;amp; operation, while Vox tries to remain relatively simple.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;strong&gt;layout-partial paradigm&lt;/strong&gt;: site consistency is maintained with &lt;a href=&quot;file:///Users/emilsayahi/Documents/GitHub/evan-website/output/guide/Data Model.html#layouts&quot;&gt;layouts&lt;/a&gt;, elements are reused with &lt;a href=&quot;file:///Users/emilsayahi/Documents/GitHub/evan-website/output/guide/Data Model.html#include&quot;&gt;includes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Simple &lt;a href=&quot;file:///Users/emilsayahi/Documents/GitHub/evan-website/output/guide/Data Model.html&quot;&gt;data model&lt;/a&gt; that draws only upon the aforementioned pre-requisite knowledge&lt;/li&gt;
+&lt;li&gt;Straightforward &lt;a href=&quot;file:///Users/emilsayahi/Documents/GitHub/evan-website/output/guide&quot;&gt;user guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;a href=&quot;#providing-feedback&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot; id=&quot;providing-feedback&quot;&gt;&lt;/a&gt;Providing Feedback&lt;/h3&gt;
+&lt;p&gt;When the SSG is unfamiliar or a site has particularly high cognitive complexity, unexpected rendering or build errors can become frustrating rather quickly.
+Vox provides logging messages that aid users in debugging their sites, both during the initial build and incremental rebuilds.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;&lt;a href=&quot;#scale--iteration&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot; id=&quot;scale--iteration&quot;&gt;&lt;/a&gt;Scale &amp;amp; Iteration&lt;/h2&gt;
+&lt;p&gt;A major source of pain for too many SSGs is build performance; many sites should take fractions of a second to build on a laptop, not minutes.
+Even then, once a site reaches a certain size, rebuilding from scratch when changes are made is not feasible. Incremental rebuilds should be done intelligently.
+Vox enables rapid iteration and unrestricted scaling of sites with its &lt;a href=&quot;file:///Users/emilsayahi/Documents/GitHub/evan-website/output/guide/Rendering Pipeline.html&quot;&gt;unique rendering pipeline&lt;/a&gt;, rebuilding only what it needs to while ensuring the entire site is up-to-date.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;&lt;a href=&quot;#emergent-capabilities&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot; id=&quot;emergent-capabilities&quot;&gt;&lt;/a&gt;Emergent Capabilities&lt;/h2&gt;
+&lt;p&gt;As a consequence of Vox’s abstractions, various capabilities emerge without the cost of added software complexity.&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;#content-traversal&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot; id=&quot;content-traversal&quot;&gt;&lt;/a&gt;Content Traversal&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;file:///Users/emilsayahi/Documents/GitHub/evan-website/output/guide/Data Model.html#layouts&quot;&gt;Layout inheritance&lt;/a&gt; and &lt;a href=&quot;file:///Users/emilsayahi/Documents/GitHub/evan-website/output/guide/Frontmatter.html#collections&quot;&gt;collections&lt;/a&gt; enable content traversal with a content hierarchy.
+A single page can reference pieces of content elsewhere in the site with ease, making content management simple by introducing relations between pages.&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;#generalising-beyond-markup&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot; id=&quot;generalising-beyond-markup&quot;&gt;&lt;/a&gt;Generalising Beyond Markup&lt;/h3&gt;
+&lt;p&gt;Vox pages have only three elements: the frontmatter, the body, and the templating within the body.
+As such, content can resemble anything; the body is not restricted to Markdown and the output is not restricted to HTML.
+Pages aren’t relegated to being single chunk of markup with some metadata on top.&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;#simple-theming&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot; id=&quot;simple-theming&quot;&gt;&lt;/a&gt;Simple Theming&lt;/h3&gt;
+&lt;p&gt;Due to the relational nature of pages, a Vox site is free to have its own schema of sorts, as established by the layouts &amp;amp; includes.
+Consequently, ‘themes’ can be written which involve configuration of &lt;code&gt;global.toml&lt;/code&gt; and nothing more, provided pages are written in accordance to the theme’s ‘schema’.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Vox is opinionated, but with its uniqueness comes distinct advantages.
+In the future, I’ll write about extending Vox with a bespoke static CMS to replace traditional CMSes in countless more use-cases.
+Thanks for reading!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Greetings from Vox</title>
+   <link href="file:///Users/emilsayahi/Documents/GitHub/evan-website/output/posts%2F2024%2F05%2F30%2FGreetings%20from%20Vox.html"/>
+   
+   <updated>2024-05-30T00:00:00+00:00</updated>
+   
+   <id>file:///Users/emilsayahi/Documents/GitHub/evan-website/output/posts%2F2024%2F05%2F30%2FGreetings%20from%20Vox.html</id>
+   <content type="html">
+Welcome to the Vox blog! Here, you&#39;ll find posts regarding milestones and general discussion regarding static site generators.</content>
+ </entry>
+ 
+
+</feed>

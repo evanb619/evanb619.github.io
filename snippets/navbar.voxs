@@ -1,0 +1,4 @@
+<div>
+    <a href="{{ global.url }}">Home</a>
+    <a href="{{ global.url | append: "/posts" }}">Posts</a>
+</div>
