@@ -1,0 +1,5 @@
+---
+depends = ["posts"]
+permalink = "science/atom.xml"
+---
+{% include atom.voxs posts = posts tag = "Science" %}

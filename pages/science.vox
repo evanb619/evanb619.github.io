@@ -1,7 +1,7 @@
 ---
 layout = "default"
 depends = ["posts"]
-permalink = "posts/index.html"
+permalink = "science/index.html"
 ---
 {% assign posts = posts | sort: "date.rfc_3339" | reverse %}
-{% include index.voxs posts = posts minimal = true %}
+{% include index.voxs posts = posts minimal = true tag = "Science" %}

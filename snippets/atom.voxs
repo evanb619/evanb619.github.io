@@ -11,6 +11,7 @@
  </author>
 
  {% for post in include.posts %}
+ {% if include.tag == nil or include.tag == post.data.tag and post.data.tag %}
  <entry>
    <title>{{ post.data.title | escape }}</title>
    <link href="{{ post.url | url_encode | prepend: "/" | prepend: global.url }}"/>
@@ -20,6 +21,7 @@
    <id>{{ post.url | url_encode | prepend: "/" | prepend: global.url }}</id>
    <content type="html">{{ post.rendered | escape }}</content>
  </entry>
+ {% endif %}
  {% endfor %}
 
 </feed>

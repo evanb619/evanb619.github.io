@@ -1,5 +1,0 @@
----
-depends = ["posts"]
-permalink = "posts/atom.xml"
----
-{% include atom.voxs posts = posts %}

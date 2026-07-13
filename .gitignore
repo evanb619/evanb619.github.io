@@ -99,4 +99,4 @@ Cargo.lock
 *.pdb
 
 ## Vox
-site/output/
+output/

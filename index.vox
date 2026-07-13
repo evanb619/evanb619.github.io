@@ -3,5 +3,6 @@ layout = "default"
 depends = ["posts"]
 permalink = "index.html"
 ---
+{% include about.voxs %}
 {% assign posts = posts | sort: "date.rfc_3339" | reverse %}
-{% include index.voxs posts = posts maxLength = 20 %}
+{% include index.voxs posts = posts maxLength = 30 %}
