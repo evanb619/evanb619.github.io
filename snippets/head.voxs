@@ -5,7 +5,7 @@
         {% if page.data.title %}
             {{ page.data.title }} &middot; {{ global.title }}
         {% else %}
-            {{ global.title }}{% if global.description %} &middot; {{ global.description }}{% endif %}
+            {{ global.title }}{% if global.description.size > 0 and global.description %} &middot; {{ global.description }}{% endif %}
         {% endif %}
     </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
