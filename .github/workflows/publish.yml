@@ -16,7 +16,7 @@ jobs:
             curl https://crates.io/api/v1/crates/grass > grass_rev
       - name: Restore Cargo cache
         id: cache-cargo
-        uses: actions/cache@v1
+        uses: actions/cache@v6
         with:
             path: ~/.cargo
             key: ${{ runner.os }}-cargo-${{ hashFiles('vox_rev', 'grass_rev') }}
