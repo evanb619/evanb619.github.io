@@ -2,4 +2,6 @@
 depends = ["random-thoughts"]
 permalink = "random-thoughts/atom.xml"
 ---
+{% if random-thoughts %}
 {% include atom.voxs posts = random-thoughts %}
+{% endif %}

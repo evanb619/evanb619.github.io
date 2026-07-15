@@ -2,4 +2,6 @@
 depends = ["science"]
 permalink = "science/atom.xml"
 ---
+{% if science %}
 {% include atom.voxs posts = science %}
+{% endif %}

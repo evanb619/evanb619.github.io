@@ -3,5 +3,9 @@ layout = "default"
 depends = ["posts"]
 permalink = "random-thoughts/index.html"
 ---
+{% if random-thoughts %}
 {% assign posts = random-thoughts | sort: "date.rfc_3339" | reverse %}
 {% include index.voxs posts = posts minimal = true %}
+{% else %}
+No posts yet.
+{% endif %}
