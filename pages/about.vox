@@ -3,4 +3,6 @@ permalink = "about/index.html"
 layout = "page"
 title = "About"
 ---
-{% include about.voxs %}
+{% markdown %}
+I am Evan Burke.
+{% endmarkdown %}

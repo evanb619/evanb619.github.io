@@ -14,9 +14,9 @@
         {% include navbar.voxs %}
         {% assign output_name = page.url | split: "/" | last %}
         {% if output_name != 'index.html' %}
-          {% if page.collections.first %}
+          {% if page.collections.last %}
             <h4>
-              <a href="{{ global.url | append: "/" | append: page.collections.first | append: "/index.html" }}" title="Back to index">⟵ {{ page.collections.first | capitalize }}</a>
+              <a href="{{ global.url | append: "/" | append: page.collections.last | append: "/index.html" }}" title="Back to index">⟵ Posts</a>
             </h4>
           {% endif %}
         {% endif %}

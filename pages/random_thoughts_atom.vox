@@ -1,5 +1,5 @@
 ---
-depends = ["posts"]
+depends = ["random-thoughts"]
 permalink = "random-thoughts/atom.xml"
 ---
-{% include atom.voxs posts = posts tag = "Random Thoughts" %}
+{% include atom.voxs posts = random-thoughts %}

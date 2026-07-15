@@ -1,6 +1,6 @@
 <div>
-    <a href="{{ global.url }}">Home</a>
-    <a href="{{ global.url | append: "/about" }}">About</a>
+    <a href="{{ global.url }}">Home</a> |
+    <a href="{{ global.url | append: "/about" }}">About</a> |
+    <a href="{{ global.url | append: "/science" }}">Science</a> |
     <a href="{{ global.url | append: "/random-thoughts" }}">Random Thoughts</a>
-    <a href="{{ global.url | append: "/science" }}">Science</a>
 </div>

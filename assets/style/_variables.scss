@@ -26,14 +26,14 @@
   --blue-400: #4dabf7;
   --yellow-100: #fff3bf;
 
-  --body-font: "Geist Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --body-font: "EB Garamond", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --body-font-size: 16px;
   --body-line-height: 1.5;
-  --body-color: var(--gray-700);
-  --body-bg: #fff;
+  --body-color: var(--gray-800);
+  --body-bg: rgb(158, 186, 162);
 
-  --link-color: var(--blue);
-  --link-hover-color: #1c7ed6;
+  --link-color: rgb(47, 121, 12);
+  --link-hover-color: rgb(59, 150, 16);
 
   --heading-color: var(--gray-900);
 
@@ -44,6 +44,8 @@
   --code-color: var(--grape);
   --code-bg: var(--gray-000);
 
+  --post-date-color: var(--gray-700);
+
   --spacer: 1rem;
   --spacer-2: calc(var(--spacer) * 1.5);
   --spacer-3: calc(var(--spacer) * 3);
@@ -51,16 +53,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --body-color: var(--gray-300);
-    --body-bg: var(--gray-900);
+    --body-color: rgb(198, 208, 231);
+    --body-bg: rgb(5, 26, 48);
 
-    --heading-color: #fff;
+    --heading-color: rgb(198, 228, 237);
 
-    --link-color: var(--blue-300);
-    --link-hover-color: var(--blue-400);
+    --link-color: rgb(186, 152, 199);
+    --link-hover-color: rgb(176, 124, 196);
 
     --border-color: rgba(255,255,255,.15);
 
     --code-bg: var(--gray-900);
+
+    --post-date-color: var(--gray-600);
   }
 }

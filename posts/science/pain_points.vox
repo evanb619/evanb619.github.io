@@ -3,7 +3,6 @@ title = "Fixing Static Site Generators"
 date = 2024-06-11
 layout = "post"
 permalink = "date"
-tag = "Science"
 ---
 
 {% markdown %}

@@ -1,7 +1,7 @@
 ---
 layout = "default"
-depends = ["posts"]
+depends = ["science"]
 permalink = "science/index.html"
 ---
-{% assign posts = posts | sort: "date.rfc_3339" | reverse %}
-{% include index.voxs posts = posts minimal = true tag = "Science" %}
+{% assign posts = science | sort: "date.rfc_3339" | reverse %}
+{% include index.voxs posts = posts minimal = true %}

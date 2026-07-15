@@ -1,5 +1,5 @@
 ---
-depends = ["posts"]
+depends = ["science"]
 permalink = "science/atom.xml"
 ---
-{% include atom.voxs posts = posts tag = "Science" %}
+{% include atom.voxs posts = science %}

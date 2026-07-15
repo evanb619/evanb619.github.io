@@ -1,6 +1,5 @@
 {% if include.minimal %}
   {% for post in include.posts %}
-  {% if include.tag == nil or include.tag == post.data.tag and post.data.tag %}
   <article class="post">
     <h1 class="post-title">
       <a href="{{ post.url | prepend: "/" | prepend: global.url }}">
@@ -11,7 +10,6 @@
     <time datetime="{{ post.date.rfc_2822 }}" class="post-date">{{ post.date.short_day }}, {{ post.date.day }} {{ post.date.short_month }} {{ post.date.year }}</time>
     {% endif %}
   </article>
-  {% endif %}
   {% endfor %}
 {% else %}
 <div class="posts">
