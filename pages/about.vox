@@ -4,6 +4,9 @@ layout = "page"
 title = "About"
 ---
 {% markdown %}
+![My husband and I at Ocean Beach]({{ global.url }}/assets/images/IMG_2613.jpg)
+[My husband](https://linkedin.com/in/emil-sayahi/) and I at Ocean Beach
+
 ##### Who I am
 
 Hi! I’m Evan. I was born and raised in the Greater Cincinnati Area where I spent much of my childhood, 
