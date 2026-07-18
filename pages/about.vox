@@ -4,5 +4,54 @@ layout = "page"
 title = "About"
 ---
 {% markdown %}
-I am Evan Burke.
+##### Who I am
+
+Hi! I’m Evan. I was born and raised in the Greater Cincinnati Area where I spent much of my childhood, 
+outside, learning about the fossils, geology, plants, and animals of the Ohio River Valley. I blame and 
+thank my childhood for instilling in me an indelible interest in exploring the beauty and 
+mysteries of the natural world.
+
+I got my bachelor's in biology from Miami University, where I also dabbled in neuroscience, 
+computer science, and bioinformatics, but environmental science has always had my heart. 
+Shortly before graduating with my bachelor’s, I applied and was accepted into a PhD program 
+for environmental biology (wherein I would’ve focused on bioremediation research in 
+eastern deciduous forests). 
+
+But, my husband got a job that was pulling us out to San Francisco and I decided to decline the offer. 
+We moved out here in May 2025, just weeks after I graduated. I was unemployed from then until about 
+the start of 2026, when I started a tech-adjacent marketing job. My goal is to, somehow, get back 
+into environmental science proper, whether through a job or grad school, in the next year or two or three. 
+
+That was a relevant introduction if you’re interested in reading the "Science" part of this blog. 
+But there is more to me than that!
+
+I also like to think and write about a wide variety of other things. There’s nothing I love more 
+than to go down random rabbit holes, and I have a wide range of hobbies, from mudlarking to 
+maritime history to poetry. Until now, almost all of my writing has been on notebook paper, 
+and has included everything from short stories to essays to thoughts on random goings-on in 
+my day-to-day life. My goal is to publish that stuff here from now on, and that will be what 
+you’ll find under the "Random Thoughts" part of this blog.
+
+##### What you will find under "Science"
+
+- My thoughts on EnvSci articles, research, topics, & issues
+- My ideas for future EnvSci research & experiments
+- Blog posts about my progress on EnvSci-related coding projects (if I ever get around to it!)
+- (Potentially) Non-EnvSci science stuff that interests me
+
+##### What you will find under "Random Thoughts"
+
+- Random thoughts, ideas, musings, etc.
+- Essays & blog posts unrelated to science
+- Maybe even some art, eventually (e.g. poetry, drawings, comics)
+
+##### Why this website exists
+
+- To participate in & contribute to the EnvSci--and broader scientific--community while I’m still employed in a different field
+- To explore areas of research to potentially pursue in grad school
+- To share my thoughts, in a relatively coherent manner, with friends & family I don't get to talk to on a daily basis
+- For my future self
+- For anyone out there interested in the things I write about :)
+
+Thanks for reading!
 {% endmarkdown %}
