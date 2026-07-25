@@ -25,7 +25,7 @@ jobs:
       - if: ${{ steps.cache-cargo.outputs.cache-hit != 'true' }}
         name: Install Grass and Vox
         run: |
-            rustup update nightly && rustup default nightly
+            rustup update stable && rustup default stable
             time cargo install grass
             time cargo install --git https://github.com/emmyoh/vox --features="cli"
       - name: Checkout codebase
