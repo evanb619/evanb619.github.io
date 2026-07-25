@@ -1,13 +1,10 @@
-
 ---
 title = "The Notebook is Mightier than the Book (Sometimes): Why I’m Trying to Consume Less and Create More"
 date = 2026-07-24
 layout = "post"
 permalink = "date"
 ---
-
-**The Notebook is Mightier than the Book (Sometimes): Why I’m Trying to Consume Less and Create More** 
-
+{% markdown %}
 *“One repays a teacher badly if one always remains nothing but a pupil.”*  
  \-- Friedrich Nietzsche, *Thus Spoke Zarathustra*
 
@@ -54,3 +51,4 @@ permalink = "date"
    2. Finish at least all of those books I’ve started, and have read at least one that was truly edifying.
 
 &emsp;&emsp;&emsp;&emsp;I know it’s only been one to three months since I/we have made these changes, and progress is not linear. I don’t, for example, anticipate never watching a movie or YouTube video for fun again. But I have to try for the things I’m drawn to do. If it’s not now, it’s never. And having started already is, I dare say, better than not having started and still being in the “planning to start” stage. If I don’t create *more*\--if I don’t create things that, upon looking back, truly required immense effort, creativity, problem solving, and innovation, whether they’re written works, works of visual art, scientific works, or something else entirely, and added something new and good to the world--things that took all I had and blew me away--I know I’ll look back on my life as somewhat wasted, even if I enjoyed it in the moment.
+{% endmarkdown %}
